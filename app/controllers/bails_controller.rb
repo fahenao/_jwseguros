@@ -1,0 +1,2 @@
+class BailsController < ApplicationController
+end

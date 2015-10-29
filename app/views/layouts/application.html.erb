@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Janapp</title>
+  <title>Jan App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+	<body>
+		
+		<%= render 'helpers/header' %>
+		<%= render 'helpers/navbar' %>
 
-<%= yield %>
+	<%= yield %>
 
-</body>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	</body>
 </html>
