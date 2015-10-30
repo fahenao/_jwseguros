@@ -10,6 +10,7 @@ class CarsController < ApplicationController
 
 	def new
 		@car = Car.new
+		@client = Client.new
 	end
 
 	def create

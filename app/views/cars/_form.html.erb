@@ -1,4 +1,4 @@
-<div class="container">
+<h4>Información del vehiculo</h4>
 <%= form_for(@car) do |f| %>
   <% if @car.errors.any? %>
     <div id="error_explanation">
@@ -31,9 +31,8 @@
      <%= f.label :Uso_del_auto %><br>
      <%= f.check_box :use %>
    </div>
-   <div class="actions">
+   <div type="submit" class="actions" id="form2" hidden="hidden">
     <br>
      <%= f.submit "Enviar" %>
    </div>
 <% end %>
-</div>

@@ -1,0 +1,50 @@
+<%= form_for(@client) do |f| %>
+  <h4>Información personal</h4>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this policy from being saved:</h2>
+      <ul>
+      <% @client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="field">
+     <%= f.label :Nombre_completo %><br>
+     <%= f.text_field :fullname %>
+   </div>
+   <div class="field">
+     <%= f.label :Email %><br>
+     <%= f.email_field :email %>
+   </div>
+   <div class="field">
+     <%= f.label :Telefono %><br>
+     <%= f.telephone_field :phone %>
+   </div>
+   <div class="field">
+     <%= f.label :Celular %><br>
+     <%= f.telephone_field :cellphone %>
+   </div>
+   <div class="field">
+     <%= f.label :Fax %><br>
+     <%= f.telephone_field :fax %>
+   </div>
+   <div class="field">
+     <%= f.label :Fecha_de_nacimiento %><br>
+     <%= f.date_select :birthdate, :start_year => 1940 %>
+   </div>
+   <div class="field">
+     <%= f.label :Genero %><br>
+     <%= f.text_field :gender %>
+   </div>
+   <div class="field">
+     <%= f.label :Edad %><br>
+     <%= f.text_field :age %>
+   </div>
+   <div type="submit" class="actions" id="form1" hidden="hidden">
+    <br>
+     <%= f.submit "Enviar" %>
+   </div>
+<% end %>
