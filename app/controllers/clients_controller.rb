@@ -3,6 +3,7 @@ class ClientsController < ApplicationController
 
 	def index
 		@client = Client.all
+	
 	end
 
 	def show
@@ -15,7 +16,7 @@ class ClientsController < ApplicationController
 	def create
 		@client = Client.new(client_params)
 			if @client.save
-				redirect_to "/"
+				redirect_to "car#create"
 			else
 				@client.errors
 				redirect_to '/'

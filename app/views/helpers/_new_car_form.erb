@@ -1,0 +1,86 @@
+<%= form_for @client do |f| %>
+  <h4>Información personal</h4>
+    <% if @client.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@client.errors.count, "error") %> prohibited this policy from being saved:</h2>
+          <ul>
+            <% @client.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+      </div>
+    <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre_completo %><br>
+    <%= f.text_field :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :Email %><br>    
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :Telefono %><br>
+    <%= f.telephone_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Celular %><br>
+    <%= f.telephone_field :cellphone %>
+  </div>
+  <div class="field">
+    <%= f.label :Fax %><br>
+    <%= f.telephone_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :Fecha_de_nacimiento %><br>
+    <%= f.date_select :birthdate, :start_year => 1940 %>
+  </div>
+  <div class="field">
+    <%= f.label :Genero %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :Edad %><br>
+    <%= f.text_field :age %>
+  </div>
+
+  <% f.fields_for @client.cars.build do |f| %>
+  <h4>Información del vehículo</h4>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this policy from being saved:</h2>
+      <ul>
+        <% @car.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <div class="field">
+      <%= f.label :Marca %><br>
+      <%= f.text_field :brand %>
+    </div>
+    <div class="field">b
+
+      <%= f.label :Precio %><br>
+      <%= f.text_field :price %>
+    </div>
+    <div class="field">
+      <%= f.label :Modelo %><br>
+      <%= f.text_field :model %>
+    </div>
+    <div class="field">
+      <%= f.label :Año %><br>
+      <%= f.select :year, (Time.zone.now.year - 20)..(Time.zone.now.year + 1) %>
+    </div>
+    <div class="field">
+      <%= f.label :Uso_del_auto %><br>
+      <%= f.check_box :use %>
+    </div>
+  <% end %>
+
+  <div type="submit" class="actions" >
+    <br>
+    <%= f.submit "Enviar" %>
+  </div>
+<% end %>

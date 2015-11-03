@@ -9,17 +9,19 @@ class CarsController < ApplicationController
 	end
 
 	def new
-		@car = Car.new
 		@client = Client.new
+		@car = @client.cars.new
 	end
 
 	def create
-		@car = Car.new(car_params)
+		client = Client.create(client_params)
+		car = Car.new(car_params)
+		car.client_id = client.find(params[:id])
 			if @car.save
 				redirect_to "/", notice: "En breve le enviaremos enviando su cotizacion. Gracias por preferirnos."
 			else
 				@car.errors
-				redirect_to 'cars/new'
+				redirect_to '/'
 			end
 	end
 
@@ -34,5 +36,10 @@ class CarsController < ApplicationController
 	def car_params
 	  params.require(:car).permit(:brand, :price, :model, :year, :use, :coverage, :comments)
 	end
+
+	def client_params
+	  params.require(:client).permit(:fullname, :email, :phone, :cellphone, :fax, :birthdate, :gender, :age)
+	end
+
 
 end

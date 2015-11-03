@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151026201050) do
+ActiveRecord::Schema.define(version: 20151101211506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,11 +30,12 @@ ActiveRecord::Schema.define(version: 20151026201050) do
     t.integer  "price"
     t.string   "model"
     t.date     "year"
-    t.integer  "use",        default: 1
-    t.integer  "coverage",   default: 1
+    t.string   "use"
+    t.string   "coverage"
     t.text     "comments"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "client_id"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -44,10 +45,10 @@ ActiveRecord::Schema.define(version: 20151026201050) do
     t.integer  "cellphone"
     t.integer  "fax"
     t.date     "birthdate"
-    t.integer  "gender",     default: 1
+    t.string   "gender"
     t.integer  "age"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "contents", force: :cascade do |t|
@@ -75,10 +76,10 @@ ActiveRecord::Schema.define(version: 20151026201050) do
 
   create_table "lives", force: :cascade do |t|
     t.integer  "sum_assured"
-    t.integer  "marital_status", default: 1
+    t.string   "marital_status"
     t.text     "comments"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
