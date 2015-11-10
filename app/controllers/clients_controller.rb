@@ -2,8 +2,6 @@ class ClientsController < ApplicationController
 	before_action :set_car, only: [:show]
 
 	def index
-		@client = Client.all
-	
 	end
 
 	def show
@@ -15,12 +13,8 @@ class ClientsController < ApplicationController
 
 	def create
 		@client = Client.new(client_params)
-			if @client.save
-				redirect_to "car#create"
-			else
-				@client.errors
-				redirect_to '/'
-			end
+		@client.save
+		redirect_to 'new_car'
 	end
 
 
@@ -34,4 +28,5 @@ class ClientsController < ApplicationController
 	def client_params
 	  params.require(:client).permit(:fullname, :email, :phone, :cellphone, :fax, :birthdate, :gender, :age)
 	end
+
 end

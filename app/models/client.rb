@@ -1,10 +1,10 @@
 class Client < ActiveRecord::Base
-	has_many :bails, :dependent => :destroy
-	has_many :cars, :dependent => :destroy
-	has_many :contents, :dependent => :destroy
-	has_many :fires, :dependent => :destroy
-	has_many :healths, :dependent => :destroy
-	has_many :lifes, :dependent => :destroy
+	has_many :products
+	has_many :cars, through: :products 
+	has_many :bails, through: :products 
+	has_many :contents, through: :products 
+	has_many :fires, through: :products 
+	has_many :healths, through: :products 
+	has_many :lifes, through: :products 
 
-	accepts_nested_attributes_for :cars
 end

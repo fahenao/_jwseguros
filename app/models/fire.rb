@@ -1,3 +1,5 @@
 class Fire < ActiveRecord::Base
-		belongs_to :client
+	has_many :products
+	has_many :clients, through: :products
+
 end

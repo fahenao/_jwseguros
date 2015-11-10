@@ -6,11 +6,12 @@
   <%= csrf_meta_tags %>
 </head>
 	<body>
-		
 		<%= render 'helpers/header' %>
 		<%= render 'helpers/navbar' %>
 
+
 	<%= yield %>
+
 		
 		<%= render 'helpers/footer' %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
