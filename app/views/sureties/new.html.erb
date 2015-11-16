@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div> <!-- empty_column -->
+		<div class="col-md-6">
+			<br>
+			<%= form_for :surety, url: '/sureties' do |f| %>
+			<h3>Datos personales</h3>
+			<br>
+			<!--Client_form -->
+			<%= render 'helpers/client_form' %>
+			<h3>Datos para cotizar</h3>
+			<br>
+			<!--Surety_form -->
+			<div class="field">
+				<%= f.label :Tipo_de_Fianza %> <br>
+				<%= f.text_field :surety_type %>
+			</div>
+			<div class="field">
+				<%= f.label :Valor_de_la_obra %> <br>
+				<%= f.text_field :value %> <br>
+			</div>
+			<div class="field">
+				<%= f.label :Porcentaje_requerido_a_afianzar %> <br>
+				<%= f.text_field :percentage %> <br>
+			</div>
+			<div class="field">
+				<%= f.label :Commentarios %> <br>
+				<%= f.text_field :comments %> <br>
+			</div>
+			
+			<br>
+			<%= f.submit "Enviar" %>
+			<% end %>
+			
+		</div>
+		<div class="col-md-4"></div> <!-- empty_column -->
+	</div>
+</div>
+<br>
+<br>

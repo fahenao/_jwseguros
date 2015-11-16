@@ -1,8 +1,8 @@
-class CarsController < ApplicationController
-	before_action :set_car, only: [:show]
+class FiresController < ApplicationController
+	before_action :set_fire, only: [:show]
 
 	def index
-		@cars = Car.all
+		@fires = Fire.all
 	end
 
 	def show
@@ -10,31 +10,31 @@ class CarsController < ApplicationController
 
 	def new
 		@client = Client.new
-		@car = Car.new
+		@fire = Fire.new
 	end
 
 	def create
 		@client = Client.new(client_params)
-		@car = Car.new(car_params)
-			if @car.save && @client.save
+		@fire = Fire.new(fire_params)
+			if @fire.save && @client.save
 				redirect_to "/", notice: "En breve le enviaremos enviando su cotizacion. Gracias por preferirnos."
 			else
-				@car.errors || @client.errors
+				@fire.errors || @client.errors
 				redirect_to '/', notice: "Porfavor intente nuevamente."
 			end
 	end
 
 	private
 	# Use callbacks to share common setup or constraints between actions.
-	def set_car
-	  @car = Car.find(params[:id])
+	def set_fire
+	  @fire = Fire.find(params[:id])
 	end
 
 	def client_params
 	  params.require(:client).permit(:fullname, :email, :phone, :cellphone, :fax, :birthdate, :gender, :age)
 	end
 	# Never trust parameters from the scary internet, only allow the white list through.
-	def car_params
-	  params.require(:car).permit(:brand, :price, :model, :year, :use, :coverage, :comments)
+	def fire_params
+	  params.require(:fire).permit(:address, :value_of_goods, :comments)
 	end
 end

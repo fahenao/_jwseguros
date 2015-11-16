@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div> <!-- empty_column -->
+		<div class="col-md-6">
+			<br>
+			<%= form_for :fire, url: '/fires' do |f| %>
+			<%= render 'helpers/client_form' %>
+			<h3>Datos para cotizar</h3>
+			<br>
+			<!--Fire_form -->
+			<div class="field">
+				<%= f.label :Dirección %> <br>
+				<%= f.text_field :address %>
+			</div>
+			<div class="field">
+				<%= f.label :Valor_del_Bien %> <br>
+				<%= f.number_field :value_of_goods %> <br>
+				<p>Ejemplo: 50,000.00</p>
+			</div>
+			<div class="field">
+				<%= f.label :Commentarios %> <br>
+				<%= f.text_area :comments %> <br>
+			</div>			
+			<br>
+			<%= f.submit "Enviar" %>
+			<% end %>
+			
+		</div>
+		<div class="col-md-4"></div> <!-- empty_column -->
+	</div>
+</div>
+<br>
+<br>

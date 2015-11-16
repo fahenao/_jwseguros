@@ -1,39 +1,37 @@
-<% form_for @client do |f| %>
-<h4>Datos Personales</h4>
-<div class="field">
-  <%= f.label :Nombre_completo %><br>
-  <%= f.text_field :fullname %>
-</div>
-<div class="field">
-  <%= f.label :Email %><br>
-  <%= f.email_field :email %>
-</div>
-<div class="field">
-  <%= f.label :Telefono %><br>
-  <%= f.telephone_field :phone %>
-</div>
-<div class="field">
-  <%= f.label :Celular %><br>
-  <%= f.telephone_field :cellphone %>
-</div>
-<div class="field">
-  <%= f.label :Fax %><br>
-  <%= f.telephone_field :fax %>
-</div>
-<div class="field">
-  <%= f.label :Fecha_de_nacimiento %><br>
-  <%= f.date_select :birthdate, :start_year => 1940 %>
-</div>
-<div class="field">
-  <%= f.label :Genero %><br>
-  <%= f.text_field :gender %>
-</div>
-<div class="field">
-  <%= f.label :Edad %><br>
-  <%= f.text_field :age %>
-</div>
-<div type="submit" class="actions" >
-  <br>
-  <%= f.submit "Enviar" %>
-</div>
-<% end %>
+<h3>Datos personales</h3>
+      <br>
+      <!--Client_form -->
+      <%= fields_for @client do |c| %>
+      <div class="field">
+        <%= c.label :Nombre_completo %> <br>
+        <%= c.text_field :fullname %>
+      </div>
+      <div class="field">
+        <%= c.label :Email %> <br>
+        <%= c.email_field :email %>
+      </div>
+      <div class="field">
+        <%= c.label :Telefono %><br>
+        <%= c.telephone_field :phone %>
+      </div>
+      <div class="field">
+        <%= c.label :Celular %><br>
+        <%= c.telephone_field :cellphone %>
+      </div>
+      <div class="field">
+        <%= c.label :Fax %><br>
+        <%= c.telephone_field :fax %>
+      </div>
+      <div class="field">
+        <%= c.label :Fecha_de_nacimiento %><br>
+        <%= c.date_select :birthdate, :start_year => 1940 %>
+      </div>
+      <div class="field">
+        <%= c.label :Genero %><br>
+        <%= c.select(:gender, options_for_select([['Masculino', 'Male'], ['Femenino', 'Female']])) %>
+      </div>
+      <div class="field">
+        <%= c.label :Edad %><br>
+        <%= c.number_field :age %>
+      </div>
+      <% end %>

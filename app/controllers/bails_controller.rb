@@ -1,2 +1,0 @@
-class BailsController < ApplicationController
-end
