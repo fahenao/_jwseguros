@@ -1,3 +1,3 @@
 class Surety < ActiveRecord::Base
-	has_many :clients
+	has_one :client
 end

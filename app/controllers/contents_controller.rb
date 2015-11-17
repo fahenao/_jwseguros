@@ -1,8 +1,8 @@
-class FiresController < ApplicationController
-	before_action :set_fire, only: [:show]
+class ContentsController < ApplicationController
+	before_action :set_content, only: [:show]
 
 	def index
-		@fires = Fire.all
+		@contents = Content.all
 	end
 
 	def show
@@ -10,32 +10,32 @@ class FiresController < ApplicationController
 
 	def new
 		@client = Client.new
-		@fire = Fire.new
+		@content = Content.new
 	end
 
 	def create
 		@client = Client.create(client_params)
-		@fire = Fire.new(fire_params)
-		@fire.client_id = @client.id
-			if @fire.save && @client.save
+		@content = Content.new(content_params)
+		@content.client_id = @client.id
+			if @content.save && @client.save
 				redirect_to "/", notice: "En breve le enviaremos enviando su cotizacion. Gracias por preferirnos."
 			else
-				@fire.errors || @client.errors
-				redirect_to '/', notice: "Porfavor intente nuevamente."
+				@content.errors || @client.errors
+				redirect_to '/contents/new', notice: "Porfavor intente nuevamente."
 			end
 	end
 
 	private
 	# Use callbacks to share common setup or constraints between actions.
-	def set_fire
-	  @fire = Fire.find(params[:id])
+	def set_content
+	  @content = Content.find(params[:id])
 	end
 
 	def client_params
 	  params.require(:client).permit(:fullname, :email, :phone, :cellphone, :fax, :birthdate, :gender, :age)
 	end
 	# Never trust parameters from the scary internet, only allow the white list through.
-	def fire_params
-	  params.require(:fire).permit(:address, :value_of_goods, :comments)
+	def content_params
+	  params.require(:content).permit(:value_of_content, :address, :comments)
 	end
 end

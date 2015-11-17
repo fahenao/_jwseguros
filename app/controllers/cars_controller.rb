@@ -14,13 +14,14 @@ class CarsController < ApplicationController
 	end
 
 	def create
-		@client = Client.new(client_params)
+		@client = Client.create(client_params)
 		@car = Car.new(car_params)
+		@car.client_id = @client.id
 			if @car.save && @client.save
 				redirect_to "/", notice: "En breve le enviaremos enviando su cotizacion. Gracias por preferirnos."
 			else
 				@car.errors || @client.errors
-				redirect_to '/', notice: "Porfavor intente nuevamente."
+				redirect_to '/cars/new', notice: "Porfavor intente nuevamente."
 			end
 	end
 

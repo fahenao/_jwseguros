@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   resources :clients
   resources :sureties
   resources :fires
+  resources :lives
+  resources :healths
+  resources :contents
 
 end

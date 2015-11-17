@@ -13,6 +13,7 @@ img {
 	.section_2	{
 		border-radius: 10px;
 		text-align: center;
-
 	}
-
+button {
+	delay: { "show": 100, "hide": 100 }
+}

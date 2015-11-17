@@ -55,43 +55,43 @@
 		<div class="row">
 			<div class="col-md-3"></div> <!-- empty_column -->
 				<div class="col-md-1 text-center"> <!-- road_icon -->
-					<button type="button" class="btn btn-lg">
+					<button type="button" class="btn btn-lg" data-toogle="tooltip" data-placement="bottom" title="Cotizar Seguro de Auto">
 		        <%= link_to new_car_path, :class => "button", :method => :get do %>
 							<span class="glyphicons glyphicon glyphicon-road road_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button>
 				</div>
 				<div class="col-md-1 text-center"> <!-- fire_icon -->
-					<button type="button" class="btn btn-lg">
+					<button type="button" class="btn btn-lg" data-toogle="tooltip" data-placement="bottom" title="Cotizar Seguro de Incendio">
 		        <%= link_to new_fire_path do %>
 							<span class="glyphicon glyphicon-fire fire_icon"></span>
 		        <% end %>
 		      </button>
 				</div>
 				<div class="col-md-1 text-center"> <!-- heart_icon -->
-					<button type="button" class="btn btn-lg">
-		        <%= link_to new_car_path do %>
+					<button type="button" class="btn btn-lg" data-placement="bottom" title="Cotizar Seguro de Vida">
+		        <%= link_to new_life_path do %>
 							<span class="glyphicon glyphicon-heart heart_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button>  
 				</div>
 				<div class="col-md-1 text-center"> <!-- plus_icon -->
-					<button type="button" class="btn btn-lg">
-		        <%= link_to new_car_path do %>
+					<button type="button" class="btn btn-lg" data-placement="bottom" title="Cotizar Poliza de Salud">
+		        <%= link_to new_health_path do %>
 							<span class="glyphicon glyphicon-plus plus_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button>  
 				</div>
 				<div class="col-md-1 text-center"> <!-- surety_icon -->
-					<button type="button" class="btn btn-lg">
+					<button type="button" class="btn btn-lg" data-placement="bottom" title="Cotizar Fianza">
 		        <%= link_to new_surety_path do %>
 							<span class="glyphicon glyphicon-usd usd_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button> 
 				</div>
 				<div class="col-md-1 text-center"> <!-- home_icon -->
-					<button type="button" class="btn btn-lg">
-		        <%= link_to new_car_path do %>
+					<button type="button" class="btn btn-lg" data-placement="bottom" title="Cotizar Seguro de Contenido">
+		        <%= link_to new_content_path do %>
 							<span class="glyphicon glyphicon-home home_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button> 

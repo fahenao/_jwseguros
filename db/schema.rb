@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116155529) do
+ActiveRecord::Schema.define(version: 20151117003057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,11 +43,12 @@ ActiveRecord::Schema.define(version: 20151116155529) do
   end
 
   create_table "contents", force: :cascade do |t|
-    t.string   "value"
+    t.integer  "value_of_content"
     t.string   "address"
     t.text     "comments"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "client_id"
   end
 
   create_table "fires", force: :cascade do |t|
@@ -56,6 +57,7 @@ ActiveRecord::Schema.define(version: 20151116155529) do
     t.text     "comments"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "client_id"
   end
 
   create_table "healths", force: :cascade do |t|
@@ -63,6 +65,7 @@ ActiveRecord::Schema.define(version: 20151116155529) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.text     "comments"
+    t.integer  "client_id"
   end
 
   create_table "lives", force: :cascade do |t|
@@ -71,6 +74,7 @@ ActiveRecord::Schema.define(version: 20151116155529) do
     t.text     "comments"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.integer  "client_id"
   end
 
   create_table "sureties", force: :cascade do |t|
@@ -80,6 +84,7 @@ ActiveRecord::Schema.define(version: 20151116155529) do
     t.text     "comments"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "client_id"
   end
 
 end
