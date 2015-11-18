@@ -28,7 +28,6 @@ gem 'better_errors'
 gem 'pry-rails'
 gem 'quiet_assets' 
 gem 'awesome_print'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -48,6 +47,7 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'figaro'
   gem 'rails_12factor', group: :production
-ruby "2.2.1"
 
+ruby "2.2.1"

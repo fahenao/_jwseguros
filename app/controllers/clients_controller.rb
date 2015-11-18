@@ -12,9 +12,6 @@ class ClientsController < ApplicationController
 	end
 
 	def create
-		@client = Client.new(client_params)
-		@client.save
-		redirect_to 'new_car'
 	end
 
 

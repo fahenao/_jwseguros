@@ -18,10 +18,12 @@ class CarsController < ApplicationController
 		@car = Car.new(car_params)
 		@car.client_id = @client.id
 			if @car.save && @client.save
-				redirect_to "/", notice: "En breve le enviaremos enviando su cotizacion. Gracias por preferirnos."
+				#send email to the user when the form is submited
+				UserMailer.welcome_email(@client.email).deliver_now
+				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@car.errors || @client.errors
-				redirect_to '/cars/new', notice: "Porfavor intente nuevamente."
+				redirect_to '/cars/new', notice: "Ingrese un email valido e intentelo nuevamente."
 			end
 	end
 
