@@ -1,37 +1,39 @@
-<h3>Datos personales</h3>
-      <br>
       <!--Client_form -->
+      <div class="page-header">
+        <h3>Datos personales</h3>
+      </div>
       <%= fields_for @client do |c| %>
-      <div class="field">
-        <%= c.label :Nombre_completo %> <br>
-        <%= c.text_field :fullname %>
-      </div>
-      <div class="field">
-        <%= c.label :Email %> <br>
-        <%= c.email_field :email %>
-      </div>
-      <div class="field">
-        <%= c.label :Telefono %><br>
-        <%= c.telephone_field :phone %>
-      </div>
-      <div class="field">
-        <%= c.label :Celular %><br>
-        <%= c.telephone_field :cellphone %>
-      </div>
-      <div class="field">
-        <%= c.label :Fax %><br>
-        <%= c.telephone_field :fax %>
-      </div>
-      <div class="field">
-        <%= c.label :Fecha_de_nacimiento %><br>
-        <%= c.date_select :birthdate, :start_year => 1940 %>
-      </div>
-      <div class="field">
-        <%= c.label :Genero %><br>
-        <%= c.select(:gender, options_for_select([['Masculino', 'Male'], ['Femenino', 'Female']])) %>
-      </div>
-      <div class="field">
-        <%= c.label :Edad %><br>
-        <%= c.number_field :age %>
-      </div>
+        
+          <div class="form-group">
+            <%= c.label :Nombre_completo %> <br>
+            <%= c.text_field :fullname, :placeholder => "Nombre y Apellido", :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= c.label :Email %> <br>
+            <%= c.email_field :email, :placeholder => "Email", :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= c.label :Telefono %><br>
+            <%= c.telephone_field :phone, :placeholder => "Teléfono", :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= c.label :Celular %><br>
+            <%= c.telephone_field :cellphone, :placeholder => "Celular", :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= c.label :Fax %><br>
+            <%= c.telephone_field :fax, :placeholder => "Fax", :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= c.label :Fecha_de_nacimiento %><br>
+            <%= c.date_select :birthdate, :start_year => 1940, :placeholder => "Fecha de Nacimiento", :class => "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= c.label :Genero %><br>
+            <%= c.select(:gender, options_for_select([['Masculino', 'Male'], ['Femenino', 'Female']]), :class =>"btn btn-primary dropdown-toggle form-control") %>
+          </div>
+          <div class="form-group">
+            <%= c.label :Edad %><br>
+            <%= c.number_field :age, :placeholder => "Edad", :class => "form-control" %>
+          </div>
       <% end %>

@@ -1,51 +1,89 @@
 <div class="container">
-	<div class="row">
-		<div class="col-md-2"></div> <!-- empty_column -->
-		<div class="col-md-6">
-			<br>
-			<%= form_for :car, url: '/cars' do |f| %>
-			<%= render 'helpers/client_form' %>
-			<h3>Datos del auto</h3>
-			<br>
-			<!--Car_form -->
-			<div class="field">
-				<%= f.label :Marca %> <br>
-				<%= f.text_field :brand %>
+
+	<div class="row"> <!-- First Row -->
+
+		<div class="col-lg-3">
+		</div> <!-- empty_column -->
+
+		<div class="col-lg-6"> <!-- empty_column -->
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			      <h3 class="panel-title">Cotize su poliza de automovil.</h3>
+			    </div>
+			  <div class="panel-body">
+			    Información de la cotización
+			  </div>
 			</div>
-			<div class="field">
-				<%= f.label :Modelo %> <br>
-				<%= f.text_field :model %> <br>
-			</div>
-			<div class="field">
-				<%= f.label :Valor_nuevo %> <br>
-				<%= f.number_field :price %> <br>
-				<p>Ejemplo: 10,500.00</p>
-			</div>
-			<div class="field">
-				<%= f.label :Año %> <br>
-				<%= f.select :year, (Time.zone.now.year - 100)..(Time.zone.now.year + 1) %>
-			</div>
-			<div class="field">
-				<%= f.label :Uso_del_auto %> <br>
-				<%= f.select(:use, options_for_select([['Comercial', 'Comercial'], ['Particular', 'Particular']])) %>
-			</div>
-			<h3>Cobertura</h3>
-			<div class="field">
-				<%= f.label :Cobertura %> <br>
-				<%= f.select(:coverage, options_for_select([['Completa', 'Complete'], ['Solo daños a terceros', 'damage to third parties']])) %>
-			</div>
-			<div class="field">
-				<%= f.label :Comentarios %> <br>
-				<%= f.text_area :comments %> <br>
-			</div>
-			
-			<br>
-			<%= f.submit "Enviar" %>
-			<% end %>
-			
 		</div>
-		<div class="col-md-4"></div> <!-- empty_column -->
+
+		<div class="col-lg-3"> <!-- empty_column -->
+		</div>
+
+	</div> <!--End of the first row -->
+
+	<div class="row">
+
+		<div class="col-lg-3"> <!-- empty_column -->
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-primary">
+			  <div class="panel-body">
+					<%= form_for :car, url: '/cars' do |f| %>
+						<form class="form-control">
+							
+
+							<%= render 'helpers/client_form' %>
+			
+							<div class="page-header">
+								<h3>Datos del vehículo</h3>
+							</div>
+							<!--Car_form -->
+							<div class="form-group">
+								<%= f.label :Marca %> 
+								<%= f.text_field :brand, :placeholder => "Marca del vehículo", :class => "form-control" %>
+							</div>
+							<div class="form-group">
+								<%= f.label :Modelo %> 
+								<%= f.text_field :model, :placeholder => "Modelo", :class => "form-control"%>
+							</div>
+							<div class="form-group">
+								<%= f.label :Valor_nuevo %> 
+								<%= f.number_field :price, :placeholder => "Valor al momento de la compra, Ejemplo: 10,500.00", :class => "form-control" %>
+							</div>
+							<div class="form-group">
+								<%= f.label :Año %> <br>
+								<%= f.select :year, (Time.zone.now.year - 100)..(Time.zone.now.year + 1) %>
+							</div>
+							<div class="form-group">
+								<%= f.label :Uso_del_auto %> <br>
+								<%= f.select(:use, options_for_select([['Comercial', 'Comercial'], ['Particular', 'Particular']]), :class =>"btn btn-primary dropdown-toggle") %>
+							</div>
+
+							<div class="page-header">
+							  <h3>Cobertura</h3>
+							</div>
+							<div class="form-group">
+								<%= f.label :Cobertura %> <br>
+								<%= f.select(:coverage, options_for_select([['Completa', 'Complete'], ['Solo daños a terceros', 'damage to third parties']]), :class =>"btn btn-primary dropdown-toggle") %>
+							</div>
+							<div class="form-group">
+								<%= f.label :Comentarios %> 
+								<%= f.text_area :comments, :placeholder => "Commentarios", :class => "form-control" %> 
+							</div>
+							<button type="submit" class="btn btn-default">Enviar</button>
+						</form>
+					<% end %>
+			  </div>
+			</div>
+		</div>
+
+		<div class="col-lg-3">
+		</div> <!-- empty_column -->
+
+		</div> <!-- End of the second row -->
 	</div>
+
 </div>
 <br>
 <br>

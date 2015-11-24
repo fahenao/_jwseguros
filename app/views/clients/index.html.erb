@@ -1,140 +1,124 @@
 <div class="container">
-	<div class="slider_carousel">
-		<div class="row">
-			<div class="col-md-2">	
-			</div>
-			<div class="col-md-8 carousel_div">
-				<div class="slider">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						</ol>
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner" role="listbox">
-							<div class="item active">
-								<a href="#"><img src="http://www.congreso.ciemi-spiapanama.org/wp-content/uploads/2015/04/panama-2-900x300.png"></a>
-								<div class="carousel-caption">
-									<h3>Seguros de contenido</h3>
-								</div>
-							</div>
-							<div class="item">
-								<img src="http://www.halppd.com/minisite/2009/PanCal/images/pages/hero-home.jpg">
-								<div class="carousel-caption">
-									<h3>Seguros de vida</h3>
-								</div>
-							</div>
-							<div class="item">
-								<img src="http://es.eveniahotels.com/CMS/Servidor/Evenia/galeria/3129____hoteles-en-panama_2693.jpg">
-								<div class="carousel-caption">
-									<h3>Seguros de salud</h3>
-								</div>
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="slider">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<a href="#"><img src="http://www.congreso.ciemi-spiapanama.org/wp-content/uploads/2015/04/panama-2-900x300.png"></a>
+							<div class="carousel-caption">
+								<h3>Seguros de contenido</h3>
 							</div>
 						</div>
-						<!-- Controls -->
-						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-						</div> <!-- carousel -->
+						<div class="item">
+							<img src="http://www.halppd.com/minisite/2009/PanCal/images/pages/hero-home.jpg">
+							<div class="carousel-caption">
+								<h3>Seguros de vida</h3>
+							</div>
+						</div>
+						<div class="item">
+							<img src="http://es.eveniahotels.com/CMS/Servidor/Evenia/galeria/3129____hoteles-en-panama_2693.jpg">
+							<div class="carousel-caption">
+								<h3>Seguros de salud</h3>
+							</div>
+						</div>
 					</div>
-			</div>
-			<div class="col-md-2">	
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+					</div> <!-- carousel -->
 			</div>
 		</div>
+		<div class="col-md-1"></div>
 	</div>
+</div>
+
 
 	<div class="index_buttons">
 		<div class="container">
 		<div class="row">
-			<div class="col-md-3"></div> <!-- empty_column -->
-				<div class="col-md-1 text-center"> <!-- road_icon -->
+			<div class="button-wrapper">
+				<div class="col-md-2 text-center"> <!-- road_icon -->
 					<button type="button" class="btn btn-lg" data-toogle="tooltip" data-placement="bottom" title="Cotizar Seguro de Auto">
 		        <%= link_to new_car_path, :class => "button", :method => :get do %>
 							<span class="glyphicons glyphicon glyphicon-road road_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button>
 				</div>
-				<div class="col-md-1 text-center"> <!-- fire_icon -->
+				<div class="col-md-2 text-center"> <!-- fire_icon -->
 					<button type="button" class="btn btn-lg" data-toogle="tooltip" data-placement="bottom" title="Cotizar Seguro de Incendio">
 		        <%= link_to new_fire_path do %>
 							<span class="glyphicon glyphicon-fire fire_icon"></span>
 		        <% end %>
 		      </button>
 				</div>
-				<div class="col-md-1 text-center"> <!-- heart_icon -->
+				<div class="col-md-2 text-center"> <!-- heart_icon -->
 					<button type="button" class="btn btn-lg" data-placement="bottom" title="Cotizar Seguro de Vida">
 		        <%= link_to new_life_path do %>
 							<span class="glyphicon glyphicon-heart heart_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button>  
 				</div>
-				<div class="col-md-1 text-center"> <!-- plus_icon -->
+				<div class="col-md-2 text-center"> <!-- plus_icon -->
 					<button type="button" class="btn btn-lg" data-placement="bottom" title="Cotizar Poliza de Salud">
 		        <%= link_to new_health_path do %>
 							<span class="glyphicon glyphicon-plus plus_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button>  
 				</div>
-				<div class="col-md-1 text-center"> <!-- surety_icon -->
+				<div class="col-md-2 text-center"> <!-- surety_icon -->
 					<button type="button" class="btn btn-lg" data-placement="bottom" title="Cotizar Fianza">
 		        <%= link_to new_surety_path do %>
 							<span class="glyphicon glyphicon-usd usd_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button> 
 				</div>
-				<div class="col-md-1 text-center"> <!-- home_icon -->
+				<div class="col-md-2 text-center"> <!-- home_icon -->
 					<button type="button" class="btn btn-lg" data-placement="bottom" title="Cotizar Seguro de Contenido">
 		        <%= link_to new_content_path do %>
 							<span class="glyphicon glyphicon-home home_icon" aria-hidden="true"></span>
 		        <% end %>
 		      </button> 
 				</div>
-				<div class="col-md-3"></div> <!-- empty_column -->
-
+			</div>
 		</div>
 		</div>
 	</div>
-
-	<div class="post_buttons">
-		<div class="container">
-			<div class="row index_p">
-				<div class="col-md-1"></div>  <!-- Empty column -->
-				<div class="col-md-5 section_1">
-					<section class="">
-						<h3>Quienes Somos</h3>
-						<p>Texto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, Texto</p>
-					</section>
+<div class="container">
+	<div class="row">
+		<div class="post_buttons">
+			<div class="container">
+				<div class="row index_p">
+					<div class="col-md-1"></div>  <!-- Empty column -->
+					<div class="col-md-5 section_1">
+						<section class="">
+							<h3>Quienes Somos</h3>
+							<p>Texto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, Texto</p>
+						</section>
+					</div>
+					<div class="col-md-5 section_2">
+						<section class="">
+							<h3>Nuestros Productos</h3>
+							<p>Texto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, Texto</p>
+						</section>
+					</div>
+					<div class="col-md-1"></div> <!-- Empty column -->
 				</div>
-				<div class="col-md-5 section_2">
-					<section class="">
-						<h3>Nuestros Productos</h3>
-						<p>Texto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, TextoTexto, Texto</p>
-					</section>
-				</div>
-				<div class="col-md-1"></div> <!-- Empty column -->
 			</div>
 		</div>
 	</div>
 </div>
-
-<style>
-	.index_p {
-		padding-bottom: 3%;
-	}
-	.section_1 {
-		border-radius: 10px;
-		text-align: center;
-	}
-	.section_2	{
-		border-radius: 10px;
-		text-align: center;
-
-	}
-</style>

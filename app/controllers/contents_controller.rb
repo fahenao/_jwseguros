@@ -18,10 +18,10 @@ class ContentsController < ApplicationController
 		@content = Content.new(content_params)
 		@content.client_id = @client.id
 			if @content.save && @client.save
-				redirect_to "/", notice: "En breve le enviaremos enviando su cotizacion. Gracias por preferirnos."
+				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@content.errors || @client.errors
-				redirect_to '/contents/new', notice: "Porfavor intente nuevamente."
+				redirect_to '/contents/new', notice: "Ingrese un email valido e intentelo nuevamente."
 			end
 	end
 

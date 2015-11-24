@@ -6,15 +6,23 @@
   <%= csrf_meta_tags %>
 </head>
 	<body>
-		<%= render 'helpers/header' %>
 		<%= render 'helpers/navbar' %>
+
 		<div class="container">
-		<% if flash[:alert] %>
-		   <p class="flash-error"><%= flash[:alert] %></p>
-		 <% end %>
-		 <% if flash[:notice] %>
-		   <p class="flash-notice"><%= flash[:notice] %></p>
-		 <% end %>
+			<div class="row">
+				<div class="col-lg-6">
+						<% if flash[:alert] %>
+					<div class="alert alert-info" role="alert">
+					  	<p class="flash-error"><%= flash[:alert] %></p>
+					</div>
+					 	<% end %>
+					 	<% if flash[:notice] %>
+					<div class="alert alert-info" role="alert">
+					  	<p class="flash-notice"><%= flash[:notice] %></p>
+					</div>
+					 	<% end %>
+				</div>
+			</div>
 		</div>
 	<%= yield %>
 

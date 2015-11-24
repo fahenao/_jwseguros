@@ -1,93 +1,22 @@
-@import "bootstrap-sprockets";
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/ 
+@import "bootstrap-sprockets"; 
 @import "bootstrap";
 
 html body {
-	font-family: Verdana;
+	font-family: "Roboto";
 	width: 100%;
-}
-.navbar-collapse a{
-	font-family: Verdana;
-	font-style: oblique;
-	font-size: 18px;
-	font-weight: bold;
-	padding: 3%;
-	border-radius: 10px;
-	color: white;
-  }
-._navbar {
-	background: #015599;
-	opacity: .9;
-	border-radius: 33px;
-	width: 84%;
-  margin: auto;
-  color: black;
-  margin-bottom: 3%;
-}
-.carousel_div{
-	  border: 2px solid #015599;
-	  border-radius: 10px;
-    padding: 10px;
-    box-shadow: inset 0 0 10px #015599;
-}
-.slider_carousel {
-	padding-bottom: 3%;
-}
-
-.slider img {
-	border-radius: 5px;
-	text-shadow: 10px;
-}
-
-.main_header {
-	width: 1140px;
-	height: 100px;
-}
-.logo_div {
-	width: 200px;
-	height: 90px;
-	color: #06003e;
-	font-size: 30px;
-	padding-top: 35px;
-	float: left;
-}
-.index_buttons {
-	margin-left: -55px;
-	padding-bottom: 3%;
-}
-.index_buttons button{
-	  width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    border: 4px solid #015599;
-    background-color: transparent;
-}
-.index_buttons button:hover{
-     background: #015599;
-}
-
-.fire_icon {
-	color: black;
-}
-.road_icon {
-	color: black;
-}
-.heart_icon {
-	color: black
-}
-.plus_icon {
-	color: black;
-	border-radius: 50%;
-}
-.usd_icon {
-	color: black;
-}
-.home_icon {
-	color: black;
-}
-.glyphicon {
-    font-size: 175%;
-    opacity: .70;
-}
-.post_buttons {
-
 }

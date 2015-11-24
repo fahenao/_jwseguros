@@ -2,7 +2,7 @@ class SuretiesController < ApplicationController
 	before_action :set_surety, only: [:show]
 
 	def index
-		@suretys = Surety.all
+		@sureties = Surety.all
 	end
 
 	def show
@@ -18,10 +18,10 @@ class SuretiesController < ApplicationController
 		@surety = Surety.new(surety_params)
 		@surety.client_id = @client.id
 			if @surety.save && @client.save
-				redirect_to "/", notice: "En breve le enviaremos enviando su cotizacion. Gracias por preferirnos."
+				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@surety.errors || @client.errors
-				redirect_to '/', notice: "Porfavor intente nuevamente."
+				redirect_to '/sureties/new', notice: "Ingrese un email valido e intentelo nuevamente."
 			end
 	end
 

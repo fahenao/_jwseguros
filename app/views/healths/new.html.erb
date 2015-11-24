@@ -1,21 +1,23 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-2"></div> <!-- empty_column -->
-		<div class="col-md-6">
-			<br>
+		<div class="col-lg-6">
 			<%= form_for :health, url: '/healths' do |f| %>
-			<%= render 'helpers/client_form' %>
-			<br>
-			<!--Health_form -->
-			<div class="field">
-				<%= f.label :Commentarios %> <br>
-				<%= f.text_area :comments %> <br>
-			</div>			
-			<br>
-			<%= f.submit "Enviar" %>
+				<form class="form-control">
+					<%= render 'helpers/client_form' %>
+					<!--Health_form -->
+					<div class="form-group">
+						<%= f.label :Commentarios %> 
+						<%= f.text_area :comments, :placeholder => "Commentarios", :class => "form-control" %>
+					</div>			
+						<button type="submit" class="btn btn-default">Enviar
+						</button>
+				</form>
 			<% end %>
 		</div>
-		<div class="col-md-4"></div> <!-- empty_column -->
+
+		<div class="col-lg-6"><!-- empty_column -->
+			
+		</div> 
 	</div>
 </div>
 <br>

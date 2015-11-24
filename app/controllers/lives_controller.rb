@@ -18,10 +18,10 @@ class LivesController < ApplicationController
 		@life = Life.new(life_params)
 		@life.client_id = @client.id
 			if @life.save && @client.save
-				redirect_to "/", notice: "En breve le enviaremos enviando su cotizacion. Gracias por preferirnos."
+				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@life.errors || @client.errors
-				redirect_to '/', notice: "Porfavor intente nuevamente."
+				redirect_to '/lives/new', notice: "Ingrese un email valido e intentelo nuevamente."
 			end
 	end
 

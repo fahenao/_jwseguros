@@ -1,0 +1,44 @@
+.navbar-default {
+  margin-top: 83px;
+  text-transform: uppercase;
+}
+a.navbar-brand {
+	color: white !important;
+}
+a.navbar-brand:hover {
+	color: #C4C4C4 !important;
+}
+nav.navbar.navbar-default a{
+	border-right: 1px dashed white;
+}
+.navbar-default .navbar-nav > li > a {
+	color: white !important;
+}
+.navbar-default .navbar-nav > li > a:hover {
+	color: #C4C4C4 !important;
+}
+ul li :not(.not-border) {
+  border-right: 2px solid white;
+  margin-right: -3px;
+}
+nav.navbar.navbar-default {
+  background: #002f5b;
+  font-color: white;
+}
+
+.navbar-header a {
+  font-weight: bold;
+  text-transform: uppercase;
+	font-size: 24px;
+}
+.navbar-collapse a{
+	font-family: Verdana;
+	font-weight: bold;
+	color: white;
+  }
+
+._navbar {
+	opacity: .9;
+	width: 84%;
+  margin: auto;
+}
