@@ -49,6 +49,7 @@ group :development, :test do
 	gem 'pry-rails'
 	gem 'quiet_assets' 
 	gem 'awesome_print'
+  gem 'rename'
 end
 
 gem 'figaro'
