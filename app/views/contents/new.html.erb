@@ -1,10 +1,16 @@
 <div class="container">
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-md-2">
+			
+		</div>
+
+		<div class="col-md-5">
 			<%= form_for :content, url: '/contents' do |f| %>
 				<form class="form-control">
 
 				<%= render 'helpers/client_form' %>
+		</div>
+		<div class="col-md-5">
 				<div class="page-header">
 					<h3>Datos para Cotizar</h3>
 				</div>
@@ -25,10 +31,6 @@
 				</form>
 			<% end %>
 		</div>
-
-		<div class="col-lg-6"> <!-- empty_column -->
-
-		</div> 
 	</div>
 </div>
 <br>

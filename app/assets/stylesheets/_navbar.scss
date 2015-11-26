@@ -1,6 +1,8 @@
 .navbar-default {
-  margin-top: 83px;
   text-transform: uppercase;
+}
+.navbar-default ul li  a{
+	margin: 0px 42px 0px 0px !important;
 }
 a.navbar-brand {
 	color: white !important;
@@ -19,7 +21,7 @@ nav.navbar.navbar-default a{
 }
 ul li :not(.not-border) {
   border-right: 2px solid white;
-  margin-right: -3px;
+  margin-right: -5px;
 }
 nav.navbar.navbar-default {
   background: #002f5b;
@@ -40,5 +42,8 @@ nav.navbar.navbar-default {
 ._navbar {
 	opacity: .9;
 	width: 84%;
-  margin: auto;
+  margin:0 auto;
+}
+div.col-md-12 {
+	padding-bottom: 30px;
 }
