@@ -1,36 +1,14 @@
 <div class="container footer">
 	<div class="row">
 		<div class="col-md-4 navlinks_footer">
-		<%= link_to "Inicio", '/' %>		
-		<%= link_to "Nosotros", '/' %>		
-		<%= link_to "Productos", '/' %>		
-		<%= link_to "Contactanos", '/' %>		
+			<%= link_to "Automovil", new_car_path %> 
+			<%= link_to "Incendio", new_fire_path %>
+			<%= link_to "Salud", new_health_path %>
+			<%= link_to "Vida", new_life_path %>
+			<%= link_to "Fianza", new_surety_path %>
+			<%= link_to "Contenido", new_content_path %>	
 		</div>
 		<br>
 		<div class="col-md-12 creator_tag">2015 | <a class="anv" href="#"><i>ANV</i></a>. Todos los derechos reservados</div>
 	</div>
 </div>
-
-<style>
-	.footer {
-		border-top: 3px solid #015599;
-		padding-top: 1%;
-		width: 70%;
-		height: 2px;
-		border-radius: 10%;
-	}
-	.anv {
-		color: inherit;
-	}
-	.navlinks_footer {
-		font-size: 12px;
-		margin-bottom: 2%;
-		margin-left: 5%;
-		color: #125094;
-	}
-	.creator_tag {
-		font-size: 12px;
-		margin-bottom: 2%;
-		text-align: center;
-	}
-</style>

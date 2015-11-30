@@ -1,37 +1,47 @@
 <div class="container">
 	<div class="row">
-		<div class="col-lg-6">
-			<%= form_for :surety, url: '/sureties' do |f| %>
-				<form class="form-control">
-					<%= render 'helpers/client_form' %> <!--Client_form -->
-					<div class="page-header">
-						<h3>Datos para Cotizar</h3>
-					</div>
-					<!--Surety_form -->
-					<div class="form-group">
-						<%= f.label :Tipo_de_Fianza %> 
-						<%= f.text_field :surety_type, :placeholder => "Tipo de Fianza", :class => "form-control"  %>
-					</div>
-					<div class="form-group">
-						<%= f.label :Valor_de_la_obra %> 
-						<%= f.text_field :value, :placeholder => "Valor de la obra a afianzar", :class => "form-control"  %> 
-					</div>
-					<div class="form-group">
-						<%= f.label :Porcentaje_requerido_a_afianzar %> 
-						<%= f.text_field :percentage, :placeholder => "Porcentaje a afianzar. Ejemplo: 5%, 10%.", :class => "form-control"  %> 
-					</div>
-					<div class="form-group">
-						<%= f.label :Commentarios %> 
-						<%= f.text_field :comments, :placeholder => "Commentarios", :class => "form-control"  %> 
-					</div>
-						<button type="submit" class="btn btn-default">
-							Enviar
-						</button>
-				</form>
-			<% end %>
+		<div class="col-md-4">
+			<%= render 'helpers/side_menu' %>
 		</div>
-		<div class="col-lg-6"> <!-- empty_column -->
-
+		<div class="col-md-8 form-top-text">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			    <p>Si desea cotizar un seguro de fianzas favor llene el siguiente formulario y uno de nuestros asesores se pondrá en contacto con usted pronto.</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+					<%= form_for :surety, url: '/sureties' do |f| %>
+						<form class="form-control">
+							<%= render 'helpers/client_form' %> <!--Client_form -->
+							<div class="page-header">
+								<h3>Datos para Cotizar</h3>
+							</div>
+							<!--Surety_form -->
+							<div class="form-group">
+								<%= f.label :Tipo_de_Fianza %> 
+								<%= f.text_field :surety_type, :placeholder => "Tipo de Fianza", :class => "form-control"  %>
+							</div>
+							<div class="form-group">
+								<%= f.label :Valor_de_la_obra %> 
+								<%= f.text_field :value, :placeholder => "Valor de la obra a afianzar", :class => "form-control"  %> 
+							</div>
+							<div class="form-group">
+								<%= f.label :Porcentaje_requerido_a_afianzar %> 
+								<%= f.text_field :percentage, :placeholder => "Porcentaje a afianzar. Ejemplo: 5%, 10%.", :class => "form-control"  %> 
+							</div>
+							<div class="form-group">
+								<%= f.label :Commentarios %> 
+								<%= f.text_field :comments, :placeholder => "Commentarios", :class => "form-control"  %> 
+							</div>
+								<button type="submit" class="btn btn-default">
+								Enviar</button>
+						</form>
+					<% end %>
+				</div>
+			</div>
 		</div> 
 	</div>
 </div>

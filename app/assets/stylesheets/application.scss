@@ -17,6 +17,23 @@
 @import "bootstrap";
 
 html body {
-	font-family: "Roboto";
+	font-family: "Serif";
 	width: 100%;
+	font-size: 15px;
+}
+.side_menu li a {
+	font-size: 18px;
+	color: white;
+	background-color: #002f5b;
+	font-weight: bold
+}
+.side_menu li a:hover {
+	font-size: 18px;
+	color: #002f5b;
+	background-color: white;
+	border: 2px solid #002f5b;
+	font-weight: bold;
+}
+.form-top-text {
+	font-size: 15px;
 }

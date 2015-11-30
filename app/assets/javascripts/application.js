@@ -16,3 +16,7 @@
 //= require_tree .
 
 //=require bootstrap-sprockets
+
+$(window).load(function(){
+       $('#.bs-example-modal-sm').modal('show');
+   });

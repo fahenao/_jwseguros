@@ -1,27 +1,22 @@
 <div class="container">
-
-	<div class="row"> <!-- First Row -->
-
-		<div class="col-lg-3">
-		</div> <!-- empty_column -->
-
-		<div class="col-lg-3"> <!-- empty_column -->
-		</div>
-
-	</div> <!--End of the first row -->
-
 	<div class="row">
-
-		<div class="col-lg-3"> <!-- empty_column -->
+		<div class="col-md-4">
+			<%= render 'helpers/side_menu' %>
+		</div> <!--Side-menu -->
+		<div class="col-md-8 form-top-text">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			    <p>Si desea cotizar un seguro de auto favor llene el siguiente formulario y uno de nuestros asesores se pondrá en contacto con usted pronto.</p>
+			  </div>
+			</div>
 		</div>
-
-		<div class="col-lg-6">
-			<div class="panel panel-primary">
+		<div class="col-md-4"></div> <!-- empty_column -->
+		<div class="col-md-8">
+			<div class="panel panel-default">
 			  <div class="panel-body">
 					<%= form_for :car, url: '/cars' do |f| %>
 						<form class="form-control">
 							
-
 							<%= render 'helpers/client_form' %>
 			
 							<div class="page-header">
@@ -66,12 +61,8 @@
 			  </div>
 			</div>
 		</div>
-
-		<div class="col-lg-3">
-		</div> <!-- empty_column -->
-
-		</div> <!-- End of the second row -->
-	</div>
+	</div> <!-- End of the first row -->
+</div>		<!-- End container -->
 
 </div>
 <br>

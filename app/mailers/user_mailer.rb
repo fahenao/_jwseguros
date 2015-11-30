@@ -1,8 +1,10 @@
 class UserMailer < ApplicationMailer
-	default from: 'fhenaop@gmail.com'
+	
+	self.default :from => 'cotizacion@jwseguros.com'
 
 	def welcome_email(user)
-		@url = 'http://example.com/login'
-		mail(to: user, subject: 'Welcome to My Awesome Site')
+		@client = Client.last
+		@url = 'http://www.jwseguros.com/'
+		mail(to: @client.email, subject: 'JW Seguros - Cotización')
 	end
 end
