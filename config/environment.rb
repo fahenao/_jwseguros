@@ -1,6 +1,6 @@
 # Load the Rails application.
-require 'mail'
 require File.expand_path('../application', __FILE__)
+require 'mail'
 
 # Initialize the Rails application.
 Rails.application.initialize!
@@ -19,7 +19,8 @@ end
 
 mail = Mail.deliver do
 		@url = 'www.jwseguros.com'
-	  to      Client.last.email
+		@email = Client.last.email
+	  to      @email
 	  from    'JW Seguros <cotizacion@jwseguros.com>'
 	  subject 'Cotizacion de su poliza - JW Seguros'
 
