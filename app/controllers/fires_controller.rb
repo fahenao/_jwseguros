@@ -18,6 +18,7 @@ class FiresController < ApplicationController
 		@fire = Fire.new(fire_params)
 		@fire.client_id = @client.id
 			if @fire.save && @client.save
+				UserMailer.welcome_email(@client.email).deliver
 				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@fire.errors || @client.errors

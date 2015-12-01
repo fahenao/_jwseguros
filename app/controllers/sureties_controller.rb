@@ -18,6 +18,7 @@ class SuretiesController < ApplicationController
 		@surety = Surety.new(surety_params)
 		@surety.client_id = @client.id
 			if @surety.save && @client.save
+				UserMailer.welcome_email(@client.email).deliver
 				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@surety.errors || @client.errors
