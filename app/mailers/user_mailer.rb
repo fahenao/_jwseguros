@@ -15,7 +15,7 @@ class UserMailer < ApplicationMailer
 
 	Mail.deliver do
 		@client = Client.last
-	  to: @client.email
+	  to @client.email
 	  from 'cotizacion@jwseguros'
 	  subject 'JW Seguros - Cotización'
 	end
