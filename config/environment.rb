@@ -19,8 +19,7 @@ end
 
 mail = Mail.deliver do
 		@url = 'www.jwseguros.com'
-		@email = Client.last.email
-	  to      @email
+		to 'cotizacion@jwseguros'
 	  from    'JW Seguros <cotizacion@jwseguros.com>'
 	  subject 'Cotizacion de su poliza - JW Seguros'
 
