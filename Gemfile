@@ -51,7 +51,6 @@ group :development, :test do
 	gem 'awesome_print'
   gem 'rename'
 end
-
 gem 'figaro'
 gem 'rails_12factor', group: :production
 
