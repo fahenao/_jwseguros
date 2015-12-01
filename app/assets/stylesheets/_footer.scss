@@ -8,6 +8,9 @@
 	bottom:0;
 	left: 57px;
 }
+.footer, .push {
+	height: 80px; /* .push must be the same height as .footer */
+}
 .anv {
 	color: inherit;
 }
