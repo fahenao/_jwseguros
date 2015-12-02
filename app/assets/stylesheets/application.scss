@@ -13,10 +13,6 @@
 *= require_tree .
 *= require_self
 */ 
-@import url(style-screen.css) screen;
-@import url(style-small.css) print, handheld;
-@import url(style-large.css) screen and (min-width: 801px);
-@import url(style-small.css) screen and (max-width: 800px);
 @import "bootstrap-sprockets"; 
 @import "bootstrap";
 
