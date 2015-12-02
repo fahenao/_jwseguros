@@ -1,15 +1,15 @@
 .footer {
-	border-top: 3px solid #002f5b;
-	padding-top: 1%;
+	border-top: 2px solid #002f5b;
+	padding-top: 3px;
 	width: 70%;
 	height: 2px;
 	width:100%;
-	height:80px;
+	height:55px;
 	bottom:0;
 	left: 57px;
 }
 .footer, .push {
-	height: 80px; /* .push must be the same height as .footer */
+	height: 55px; /* .push must be the same height as .footer */
 }
 .anv {
 	color: inherit;
