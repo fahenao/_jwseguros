@@ -1,14 +1,14 @@
 class UserMailer < ApplicationMailer
 	default from: 'cotizacion@jwseguros.com'
 
-	def welcome_email(user)
-		@client = Client.last
+	def welcome_email(client, car)
+		@client = client
+		@car = car
 		@url = 'wwww.jwseguros.com'
-		mail(	to: @client.email, 
+		mail(	to: @client.email,
+					cco: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
-					subject: 'Cotizacion de poliza - JW Seguros'
+					subject: 'Cotización de póliza - JW Seguros'
 					)
 	end
-		
-
 end
