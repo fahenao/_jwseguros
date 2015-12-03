@@ -1,5 +1,6 @@
 .footer {
-	border-top: 2px solid #002f5b;
+	border-top: 1px solid #002f5b;
+	border-left: -10px;
 	padding-top: 3px;
 	width: 70%;
 	height: 2px;
@@ -7,23 +8,31 @@
 	height:55px;
 	bottom:0;
 	left: 57px;
+	
 }
 .footer, .push {
 	height: 55px; /* .push must be the same height as .footer */
 }
 .anv {
 	color: inherit;
+
 }
 .navlinks_footer {
-	font-size: 9px;
+	font-size: 10px;
 	color: #125094;
-	text-transform: uppercase;
+	padding-top: 3px;
 }
 .navlinks_footer a {
 	border-right: 1px solid #002f5b;
 	padding-right: 3px; 
 }
+.navlinks_footer a:last-child {
+    border-right: none;
+}
 .creator_tag {
 	font-size: 12px;
 	text-align: center;
+}
+div.container.footer {
+	width: 976px;
 }
