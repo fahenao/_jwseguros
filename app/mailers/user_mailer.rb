@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
 		mail(	to: @client.email,
 					cco: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
-					subject: 'Cotización de seguro de automovil - JW Seguros'
+					subject: 'Cotización de seguro de autómovil - JW Seguros'
 					)
 	end
 
