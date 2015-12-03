@@ -18,7 +18,7 @@ class HealthsController < ApplicationController
 		@health = Health.new(health_params)
 		@health.client_id = @client.id
 			if @health.save && @client.save
-				UserMailer.welcome_email(@client.email).deliver
+				UserMailer.health_policy_email(@client, @health).deliver
 				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@health.errors || @client.errors

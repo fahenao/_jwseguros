@@ -18,7 +18,7 @@ class LivesController < ApplicationController
 		@life = Life.new(life_params)
 		@life.client_id = @client.id
 			if @life.save && @client.save
-				UserMailer.welcome_email(@client.email).deliver
+				UserMailer.life_policy_email(@client, @life).deliver
 				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@life.errors || @client.errors

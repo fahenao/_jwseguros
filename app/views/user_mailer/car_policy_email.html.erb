@@ -10,39 +10,14 @@
     <div class="row">
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <img src="assets/jwslogo-sinfondo.png">
           <div class="caption">
             <h3>Cotización <a href="www.jwseguros.com">JW Seguros</a></h3>
-            <p>Gracias por confiar en nosotros, <%= Client.last.fullname %>. <br> En breves uno de nuestros asesores se pondra en contacto con usted.
+            <p>Gracias por confiar en nosotros, <%= Client.last.fullname %> <br> En breves uno de nuestros asesores se pondra en contacto con usted.
               <h4>Información de la cotización</h4>
               <p>
                 <ul>
-                  <h5>Información Personal</h5>
-                  <li>
-                    <p>Nombre: <%= @client.fullname%>.</p>
-                  </li>
-                  <li>
-                    <p>Email: <%= @client.email%>.</p>
-                  </li>
-                  <li>
-                    <p>Teléfono: <%= @client.phone%>.</p>
-                  </li>
-                  <li>
-                    <p>Celular: <%= @client.phone%>.</p>
-                  </li>
-                  <li>
-                    <p>Fac: <%= @client.fax%>.</p>
-                  </li>
-                  <li>
-                    <p>Fecha de nacimiento: <%= @client.birthdate%>.</p>
-                  </li>
-                  <li>
-                    <p>Genero: <%= @client.gender%>.</p>
-                  </li>
-                  <li>
-                    <p>Edad: <%= @client.age%>.</p>
-                  </li>
-                    <h5>Información del automovil</h5>
+                  <%= render '/user_mailer/mail_helper/client_info' %>
+                    <h5>Datos del automovil</h5>
                   <li>
                     <p>Marca: <%= @car.brand %>.</p>
                   </li>
