@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
 		@car = car
 		@url = 'wwww.jwseguros.com'
 		mail(	to: @client.email,
-					cco: 'jwoolford@jwseguros.com', 
+					bcc: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
 					subject: 'Cotización de seguro de autómovil - JW Seguros'
 					)
@@ -17,7 +17,7 @@ class UserMailer < ApplicationMailer
 			@content = content
 			@url = 'wwww.jwseguros.com'
 			mail(	to: @client.email,
-						cco: 'jwoolford@jwseguros.com', 
+						bcc: 'jwoolford@jwseguros.com', 
 						from: 'cotizacion@jwseguros.com', 
 						subject: 'Cotización de seguro de contenido - JW Seguros'
 						)
@@ -28,7 +28,7 @@ class UserMailer < ApplicationMailer
 			@fire = fire
 			@url = 'wwww.jwseguros.com'
 			mail(	to: @client.email,
-						cco: 'jwoolford@jwseguros.com', 
+						bcc: 'jwoolford@jwseguros.com', 
 						from: 'cotizacion@jwseguros.com', 
 						subject: 'Cotización de seguro contra incendios - JW Seguros'
 						)
@@ -39,7 +39,7 @@ class UserMailer < ApplicationMailer
 			@health = health
 			@url = 'wwww.jwseguros.com'
 			mail(	to: @client.email,
-						cco: 'jwoolford@jwseguros.com', 
+						bcc: 'jwoolford@jwseguros.com', 
 						from: 'cotizacion@jwseguros.com', 
 						subject: 'Cotización de seguro de salud - JW Seguros'
 						)
@@ -50,7 +50,7 @@ class UserMailer < ApplicationMailer
 			@life = life
 			@url = 'wwww.jwseguros.com'
 			mail(	to: @client.email,
-						cco: 'jwoolford@jwseguros.com', 
+						bcc: 'jwoolford@jwseguros.com', 
 						from: 'cotizacion@jwseguros.com', 
 						subject: 'Cotización de seguro de vida - JW Seguros'
 						)
@@ -61,7 +61,7 @@ class UserMailer < ApplicationMailer
 			@surety = surety
 			@url = 'wwww.jwseguros.com'
 			mail(	to: @client.email,
-						cco: 'jwoolford@jwseguros.com', 
+						bcc: 'jwoolford@jwseguros.com', 
 						from: 'cotizacion@jwseguros.com', 
 						subject: 'Cotización de seguro de fianza - JW Seguros'
 						)
