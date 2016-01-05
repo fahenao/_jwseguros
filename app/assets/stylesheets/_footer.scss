@@ -1,5 +1,5 @@
 .footer {
-	border-top: 1px solid #002f5b;
+	border-top: 1px solid black;
 	border-left: -10px;
 	padding-top: 3px;
 	width: 70%;
@@ -8,7 +8,7 @@
 	height:55px;
 	bottom:0;
 	left: 57px;
-	
+	background-color: #f8f8f8;	
 }
 .footer, .push {
 	height: 55px; /* .push must be the same height as .footer */

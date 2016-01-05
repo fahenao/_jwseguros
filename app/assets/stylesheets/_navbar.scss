@@ -3,14 +3,16 @@ div#bs-example-navbar-collapse-1.collapse.navbar-collapse {
 	font-style: bold;
 	font-size: 20px;
 	border-radius: 3px;
+	margin-left: 15px;
+  margin-right: 15px;
 	a {
 		color: white;
-		border-right: 1px dashed white;
 	}
 	a:hover{
-	background-color: white;
+	background-color: #f8f8f8;
 	color: #002f5b;
 	font-style: bold;
+	border-right: 1px solid #002f5b;
 	}
 	#not-border a{
 		border: none;
@@ -19,8 +21,12 @@ div#bs-example-navbar-collapse-1.collapse.navbar-collapse {
 div.navbar-header {
 	background-color: #002f5b;
 	a:hover {
-		background-color: white;
+		background-color: #f8f8f8;
 		color: #002f5b;
 		font-style: bold;
 	}
+}
+nav.navbar.navbar-default {
+	border: 0px solid transparent;
+	background: white;
 }
