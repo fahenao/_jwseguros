@@ -15,12 +15,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
           <ul class="nav navbar-nav">
-            <li><%= link_to "Automóvil", new_car_path %><span class="sr-only">(current)</span></li>
-            <li><%= link_to "Incendio", new_fire_path %></li>
-            <li><%= link_to "Salud", new_health_path %></li>
-            <li><%= link_to "Vida", new_life_path %></li>
-            <li><%= link_to "Fianza", new_surety_path %></li>
-            <li><%= link_to "Contenido", new_content_path%></li>
+            <li class="<%= 'active_nav' if current_page?(new_car_path) %>"><%= link_to "Automóvil", new_car_path %><span class="sr-only">(current)</span></li>
+            <li class="<%= 'active_nav' if current_page?(new_fire_path) %>"><%= link_to "Incendio", new_fire_path %></li>
+            <li class="<%= 'active_nav' if current_page?(new_health_path) %>"><%= link_to "Salud", new_health_path %></li>
+            <li class="<%= 'active_nav' if current_page?(new_life_path) %>"><%= link_to "Vida", new_life_path %></li>
+            <li class="<%= 'active_nav' if current_page?(new_surety_path) %>"><%= link_to "Fianza", new_surety_path %></li>
+            <li class="<%= 'active_nav' if current_page?(new_content_path) %>"><%= link_to "Contenido", new_content_path%></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">

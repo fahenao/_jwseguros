@@ -8,6 +8,11 @@ div#bs-example-navbar-collapse-1.collapse.navbar-collapse {
 	a {
 		color: white;
 	}
+	.active_nav a{
+		background-color: #f8f8f8;
+		color: #002f5b;
+		font-style: bold;
+	}
 	a:hover{
 	background-color: #f8f8f8;
 	color: #002f5b;
