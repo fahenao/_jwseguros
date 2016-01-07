@@ -19,15 +19,16 @@
 }
 .navlinks_footer {
 	font-size: 10px;
-	color: #125094;
+	color: #002f5b;
 	padding-top: 3px;
 }
 .navlinks_footer a {
 	border-right: 1px solid #002f5b;
-	padding-right: 3px; 
+	padding-right: 6px;
+	color:#002f5b;;
 }
 .navlinks_footer a:last-child {
-    border-right: none;
+   border-right: none;
 }
 .creator_tag {
 	font-size: 12px;
