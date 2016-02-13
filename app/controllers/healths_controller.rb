@@ -14,7 +14,7 @@ class HealthsController < ApplicationController
 	end
 
 	def create
-		@client = Client.new(client_params)
+		@client = Client.create(client_params)
 		@health = Health.new(health_params)
 		@health.client_id = @client.id
 			if @health.save && @client.save
