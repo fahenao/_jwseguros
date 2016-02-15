@@ -24,7 +24,7 @@ class UserMailer < ApplicationMailer
 		end
 
 		def fire_policy_email(client, fire)
-			@client = client
+			@client = client§ß
 			@fire = fire
 			@url = 'wwww.jwseguros.com'
 			mail(	to: @client.email,
