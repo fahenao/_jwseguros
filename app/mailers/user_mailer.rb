@@ -17,7 +17,7 @@ class UserMailer < ApplicationMailer
 			@content = content
 			@url = 'wwww.jwseguros.com'
 			mail(	to: @client.email,
-						bcc: 'jwoolford@jwseguros.com', 
+						:bcc => ['jwoolford@jwseguros.com'], 
 						from: 'cotizacion@jwseguros.com', 
 						subject: 'Cotización de seguro de contenido - JW Seguros'
 						)
@@ -28,7 +28,7 @@ class UserMailer < ApplicationMailer
 			@fire = fire
 			@url = 'wwww.jwseguros.com'
 			mail(	to: @client.email,
-						bcc: 'jwoolford@jwseguros.com', 
+						:bcc => ['jwoolford@jwseguros.com'], 
 						from: 'cotizacion@jwseguros.com', 
 						subject: 'Cotización de seguro contra incendios - JW Seguros'
 						)
