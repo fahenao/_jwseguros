@@ -5,11 +5,7 @@ class UserMailer < ApplicationMailer
 		@client = client
 		@car = car
 		@url = 'wwww.jwseguros.com'
-		mail(	to: @client.email,
-					bcc: 'jwoolford@jwseguros.com', 
-					from: 'cotizacion@jwseguros.com', 
-					subject: 'Cotización de seguro de autómovil - JW Seguros'
-					)
+		mail :to => @client.email, :bcc => 'jwoolford@jwseguros.com', :from => 'cotizacion@jwseguros.com', :subject => 'Cotización de seguro de autómovil - JW Seguros'
 	end
 
 	def content_policy_email(client, content)
