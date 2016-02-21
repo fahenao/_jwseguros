@@ -19,7 +19,7 @@ class CarsController < ApplicationController
 		@car.client_id = @client.id
 			if @car.save && @client.save
 				#send email to the user when the form is submited
-				UserMailer.car_policy_email.deliver_now
+				UserMailer.car_policy_email(@client, @car).deliver_now
 				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@car.errors || @client.errors
