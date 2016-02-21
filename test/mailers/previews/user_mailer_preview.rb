@@ -1,4 +1,5 @@
-# Preview all emails at http://localhost:3000/rails/mailers/user_mailer
 class UserMailerPreview < ActionMailer::Preview
-
+  def car_policy_email
+    UserMailer.car_policy_email(Client.first, Car.first)
+  end
 end

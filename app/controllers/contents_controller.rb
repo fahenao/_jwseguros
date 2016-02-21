@@ -18,7 +18,7 @@ class ContentsController < ApplicationController
 		@content = Content.new(content_params)
 		@content.client_id = @client.id
 			if @content.save && @client.save
-				UserMailer.content_policy_email(@client, @content).deliver
+				UserMailer.content_policy_email(@client, @content).deliver_now
 				redirect_to "/", notice: "En breve recibira un email de confirmacion. Gracias por preferirnos"
 			else
 				@content.errors || @client.errors
