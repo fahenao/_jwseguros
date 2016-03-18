@@ -2,6 +2,7 @@ class ClientsController < ApplicationController
 	before_action :set_car, only: [:show]
 
 	def index
+		@clients = Client.all
 	end
 
 	def show

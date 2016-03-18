@@ -9,4 +9,10 @@ class Client < ActiveRecord::Base
 	has_many :healths 
 	has_many :lifes
 
+	def create_car(model, car)
+		@client = client
+		@car = car
+
+	end
+
 end

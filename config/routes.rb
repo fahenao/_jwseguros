@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'clients#index'
+  root 'pages#home'
 
   resources :cars, except: [:update, :destroy]
   resources :clients, except: [:update, :destroy]
@@ -10,3 +10,5 @@ Rails.application.routes.draw do
   resources :contents, except: [:update, :destroy]
 
 end
+
+
