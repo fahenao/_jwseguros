@@ -2,3 +2,20 @@ button.btn.btn-primary {
 	border-color: white;
 	background-color: transparent;
 }
+.modal-content {
+	padding: 20px 20px 20px 20px;
+	float: right;
+	img {
+    max-width: 150px;
+	}
+	.modal-title {
+		color: #002f5b;
+		font-weight: bold;
+	}
+}
+.generali_modal {
+	.generali-modal-logo {
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+}
