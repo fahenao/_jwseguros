@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :lives, except: [:update, :destroy]
   resources :healths, except: [:update, :destroy]
   resources :contents, except: [:update, :destroy]
-
 end
 
 
