@@ -21,6 +21,10 @@
             <li class="<%= 'active_nav' if current_page?(new_life_path) %>"><%= link_to "Vida", new_life_path %></li>
             <li class="<%= 'active_nav' if current_page?(new_surety_path) %>"><%= link_to "Fianza", new_surety_path %></li>
             <li class="<%= 'active_nav' if current_page?(new_content_path) %>"><%= link_to "Contenido", new_content_path%></li>
+            <li>
+              <a type="button" class="asistencia_button" data-toggle="modal" data-target=".asistencia_modal">Asistencia</button>
+              </a>
+            </li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -30,3 +34,57 @@
     </nav>
   </div>
 </div><!-- /.container -->
+
+
+<!-- ASISTENCIA_MODAL_CONTENT -->
+<div class="modal fade asistencia_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <table class="table table-hover asistencia_table">
+        <tr> <!-- TÍTULO-->
+            <p> 
+              <strong class="modal_title">Números de asistencia  </strong> de las compañías aseguradoras
+            </p>
+        </tr>
+
+        <tr>
+          <td><img src="assets/assa.png" class="small" alt="Responsive image"/></td>
+          <td>300-2424</td>
+        </tr>
+        <tr>
+          <td><img src="assets/generali.png" class="img-responsive big" alt="Responsive image"/></td>
+          <td>800-4357 <br> 206-5757</td>
+        </tr>
+        <tr>
+          <td><img src="assets/internacional.png" class="img-responsive big" alt="Responsive image"/></td>
+          <td>
+            800-4400 <br>
+            265-2881 <br>
+            +1 305 455-1575
+          </td>
+        </tr>
+        <tr>
+          <td><img src="assets/sura.png" class="img-responsive" alt="Responsive image"/></td>
+          <td>
+            800-8888 <br>
+            205-0700    
+          </td>
+        </tr>
+        <tr>
+          <td><img src="assets/mapfre.png" class="img-responsive" alt="Responsive image"/></td>
+          <td>
+            378-9800 <br>
+            390-9090
+          </td>
+        </tr>
+        <tr>
+          <td><img src="assets/lafloresta.png" class="img-responsive" alt="Responsive image"/></td>
+          <td>
+            377-9400 <br>
+            800-2711 
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
