@@ -3,7 +3,6 @@
         <h3>Datos personales</h3>
       </div>
       <%= fields_for @client do |c| %>
-        
           <div class="form-group">
             <%= c.label :Nombre_completo %> <br>
             <%= c.text_field :fullname, :placeholder => "Nombre y Apellido", :class => "form-control", :autofocus => true %>

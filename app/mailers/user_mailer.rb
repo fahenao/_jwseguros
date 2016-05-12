@@ -1,10 +1,12 @@
+# encoding: utf-8
+
 class UserMailer < ApplicationMailer
 	default from: 'cotizacion@jwseguros.com'
 
 	def car_policy_email(client, car)
 		@client = client
 		@car = car
-		@url = 'wwww.jwseguros.com'
+		@url = 'www.jwseguros.com'
 		mail(	to: @client.email,
 					bcc: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
@@ -15,7 +17,7 @@ class UserMailer < ApplicationMailer
 	def content_policy_email(client, content)
 		@client = client
 		@content = content
-		@url = 'wwww.jwseguros.com'
+		@url = 'www.jwseguros.com'
 		mail(	to: @client.email, 
 					bcc: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
@@ -26,7 +28,7 @@ class UserMailer < ApplicationMailer
 	def fire_policy_email(client, fire)
 		@client = client
 		@fire = fire
-		@url = 'wwww.jwseguros.com'
+		@url = 'www.jwseguros.com'
 		mail(	to: @client.email,
 					bcc: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
@@ -37,7 +39,7 @@ class UserMailer < ApplicationMailer
 	def health_policy_email(client, health)
 		@client = client
 		@health = health
-		@url = 'wwww.jwseguros.com'
+		@url = 'www.jwseguros.com'
 		mail(	to: @client.email,
 					bcc: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
@@ -48,7 +50,7 @@ class UserMailer < ApplicationMailer
 	def life_policy_email(client, life)
 		@client = client
 		@life = life
-		@url = 'wwww.jwseguros.com'
+		@url = 'www.jwseguros.com'
 		mail(	to: @client.email,
 					bcc: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
@@ -59,7 +61,7 @@ class UserMailer < ApplicationMailer
 	def surety_policy_email(client, surety)
 		@client = client
 		@surety = surety
-		@url = 'wwww.jwseguros.com'
+		@url = 'www.jwseguros.com'
 		mail(	to: @client.email,
 					bcc: 'jwoolford@jwseguros.com', 
 					from: 'cotizacion@jwseguros.com', 
