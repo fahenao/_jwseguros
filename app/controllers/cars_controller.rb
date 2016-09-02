@@ -14,8 +14,10 @@ class CarsController < ApplicationController
 	end
 
 	def create
+		binding.pry
 		@client = Client.create(client_params)
 		@car = Car.new(car_params)
+		binding.pry
 		@car.client_id = @client.id
 			if @car.save && @client.save
 				#send email to the user when the form is submited
