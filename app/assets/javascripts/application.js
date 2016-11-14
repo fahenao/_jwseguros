@@ -16,3 +16,9 @@
 //= require_tree .
 
 //=require bootstrap-sprockets
+
+
+	$('.modal-content').on("click",(function(event){
+		event.preventDefault()
+		$('#modal').modal().hide();
+	}))
